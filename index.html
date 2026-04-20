@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Harley’s Stories</title>
+  <title>Harley’s Writing</title>
 
   <style>
     body {
@@ -11,15 +11,22 @@
       margin: auto;
       padding: 40px;
       background: #fafafa;
+      line-height: 1.6;
     }
 
     h1 {
       text-align: center;
     }
 
+    .description {
+      text-align: center;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
     .story {
       margin: 20px 0;
-      padding: 15px;
+      padding-bottom: 10px;
       border-bottom: 1px solid #ccc;
     }
 
@@ -32,16 +39,30 @@
     a:hover {
       text-decoration: underline;
     }
+
+    .summary {
+      color: #666;
+      font-size: 14px;
+    }
   </style>
 </head>
 
 <body>
 
-<h1>Harley’s Archive</h1>
+<h1>Harley’s Writing</h1>
+
+<p class="description">
+A collection of essays and stories written by Harley.
+</p>
 
 <div class="story">
   <a href="stories/story1.html">My First Story</a>
-  <p>A short description here</p>
+  <p class="summary">A short description of the story.</p>
+</div>
+
+<div class="story">
+  <a href="stories/story2.html">Another Essay</a>
+  <p class="summary">What this one is about.</p>
 </div>
 
 </body>
