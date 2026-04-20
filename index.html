@@ -4,70 +4,96 @@
   <meta charset="UTF-8">
   <title>Harley’s Writing</title>
 
+  <!-- Pretty font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
+
   <style>
     body {
-      font-family: Georgia, serif;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom, #fdf6f9, #f3f7ff);
+      color: #2c2c2c;
+    }
+
+    .container {
       max-width: 800px;
       margin: auto;
-      padding: 40px;
-      background: #fafafa;
-      line-height: 1.6;
+      padding: 60px 20px;
     }
 
     h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
       text-align: center;
+      margin-bottom: 10px;
     }
 
     .description {
       text-align: center;
-      color: #555;
-      margin-bottom: 40px;
+      color: #666;
+      margin-bottom: 50px;
+      font-size: 16px;
     }
 
     .story {
+      background: white;
+      padding: 20px;
       margin: 20px 0;
-      padding-bottom: 10px;
-      border-bottom: 1px solid #ccc;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .story:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
     }
 
     a {
-      font-size: 20px;
+      font-size: 22px;
       text-decoration: none;
-      color: black;
+      color: #333;
+      font-weight: 600;
     }
 
     a:hover {
-      text-decoration: underline;
+      color: #7a6cff;
     }
 
     .summary {
-      color: #666;
+      color: #777;
       font-size: 14px;
+      margin-top: 5px;
     }
   </style>
 </head>
 
 <body>
 
-<h1>Harley’s Writing</h1>
+<div class="container">
 
-<p class="description">
-A collection of essays and stories written by Harley.
-</p>
+  <h1>Harley’s Writing</h1>
 
-<!-- STORY 1 -->
-<div class="story">
-  <a href="stories/story1.html">My First Story</a>
-  <p class="summary">A short description of the story.</p>
+  <p class="description">
+    A collection of essays and stories written by Harley ✨
+  </p>
+
+  <!-- STORY 1 -->
+  <div class="story">
+    <a href="stories/story1.html">My First Story</a>
+    <p class="summary">A short description of the story.</p>
+  </div>
+
+  <!-- STORY 2 -->
+  <div class="story">
+    <a href="stories/story2.html">Another Essay</a>
+    <p class="summary">What this one is about.</p>
+  </div>
+
+  <!-- ADD MORE STORIES BELOW -->
+
 </div>
-
-<!-- STORY 2 -->
-<div class="story">
-  <a href="stories/story2.html">Another Essay</a>
-  <p class="summary">What this one is about.</p>
-</div>
-
-<!-- ADD MORE STORIES BELOW THIS LINE -->
 
 </body>
 </html>
