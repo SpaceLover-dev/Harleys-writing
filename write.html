@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Write Post</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      max-width: 600px;
+      margin: auto;
+      padding: 40px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Write a Post</h1>
+
+<input id="title" placeholder="Title">
+<textarea id="text" rows="10" placeholder="Write your post here..."></textarea>
+
+<button onclick="createPost()">Generate Post</button>
+
+<script>
+function createPost() {
+  const title = document.getElementById("title").value;
+  const text = document.getElementById("text").value;
+
+  const newPost = {
+    title: title,
+    text: text
+  };
+
+  alert(
+    "Copy this into posts.json on GitHub:\n\n" +
+    JSON.stringify(newPost, null, 2)
+  );
+}
+</script>
+
+</body>
+</html>
