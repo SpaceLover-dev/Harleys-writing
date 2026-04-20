@@ -2,35 +2,104 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>My First Story</title>
+  <title>Harley’s Writing</title>
+
+  <!-- Classic book fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=EB+Garamond&display=swap" rel="stylesheet">
 
   <style>
     body {
-      font-family: Georgia, serif;
-      max-width: 700px;
+      margin: 0;
+      padding: 0;
+      background: #f4f1ea; /* paper tone */
+      color: #2b2b2b;
+      font-family: 'EB Garamond', serif;
+    }
+
+    .container {
+      max-width: 850px;
       margin: auto;
-      padding: 40px;
-      line-height: 1.7;
-      background: #ffffff;
+      padding: 70px 25px;
     }
 
     h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px;
       text-align: center;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .description {
+      text-align: center;
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 50px;
+      font-style: italic;
+    }
+
+    .story {
+      background: #fffdf7;
+      border: 1px solid #e6e0d4;
+      padding: 22px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      transition: transform 0.15s ease;
+    }
+
+    .story:hover {
+      transform: translateY(-3px);
+    }
+
+    a {
+      font-size: 26px;
+      text-decoration: none;
+      color: #1f1f1f;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .summary {
+      margin-top: 8px;
+      font-size: 16px;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    /* subtle page feel */
+    .container::before {
+      content: "";
+      display: block;
+      height: 10px;
     }
   </style>
 </head>
 
 <body>
 
-<h1>My First Story</h1>
+<div class="container">
 
-<p>
-Write your story here. Just type normally like a document.
-</p>
+  <h1>Harley’s Writing</h1>
 
-<p>
-You can add as many paragraphs as you want.
-</p>
+  <p class="description">
+    A quiet collection of essays and stories.
+  </p>
+
+  <div class="story">
+    <a href="stories/story1.html">My First Story</a>
+    <p class="summary">A short introduction to the beginning of something personal.</p>
+  </div>
+
+  <div class="story">
+    <a href="stories/story2.html">Another Essay</a>
+    <p class="summary">A reflection on thoughts, ideas, or memories.</p>
+  </div>
+
+</div>
 
 </body>
 </html>
