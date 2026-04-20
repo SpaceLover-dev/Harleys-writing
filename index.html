@@ -4,67 +4,77 @@
   <meta charset="UTF-8">
   <title>Harley’s Writing</title>
 
-  <!-- Pretty font -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
+  <!-- Classic book fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=EB+Garamond&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom, #fdf6f9, #f3f7ff);
-      color: #2c2c2c;
+      background: #f4f1ea; /* paper tone */
+      color: #2b2b2b;
+      font-family: 'EB Garamond', serif;
     }
 
     .container {
-      max-width: 800px;
+      max-width: 850px;
       margin: auto;
-      padding: 60px 20px;
+      padding: 70px 25px;
     }
 
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 48px;
+      font-size: 52px;
       text-align: center;
       margin-bottom: 10px;
+      letter-spacing: 0.5px;
     }
 
     .description {
       text-align: center;
-      color: #666;
+      font-size: 18px;
+      color: #555;
       margin-bottom: 50px;
-      font-size: 16px;
+      font-style: italic;
     }
 
     .story {
-      background: white;
-      padding: 20px;
+      background: #fffdf7;
+      border: 1px solid #e6e0d4;
+      padding: 22px;
       margin: 20px 0;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      transition: transform 0.15s ease;
     }
 
     .story:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+      transform: translateY(-3px);
     }
 
     a {
-      font-size: 22px;
+      font-size: 26px;
       text-decoration: none;
-      color: #333;
+      color: #1f1f1f;
       font-weight: 600;
     }
 
     a:hover {
-      color: #7a6cff;
+      text-decoration: underline;
     }
 
     .summary {
-      color: #777;
-      font-size: 14px;
-      margin-top: 5px;
+      margin-top: 8px;
+      font-size: 16px;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    /* subtle page feel */
+    .container::before {
+      content: "";
+      display: block;
+      height: 10px;
     }
   </style>
 </head>
@@ -76,22 +86,18 @@
   <h1>Harley’s Writing</h1>
 
   <p class="description">
-    A collection of essays and stories written by Harley ✨
+    A quiet collection of essays and stories.
   </p>
 
-  <!-- STORY 1 -->
   <div class="story">
     <a href="stories/story1.html">My First Story</a>
-    <p class="summary">A short description of the story.</p>
+    <p class="summary">A short introduction to the beginning of something personal.</p>
   </div>
 
-  <!-- STORY 2 -->
   <div class="story">
     <a href="stories/story2.html">Another Essay</a>
-    <p class="summary">What this one is about.</p>
+    <p class="summary">A reflection on thoughts, ideas, or memories.</p>
   </div>
-
-  <!-- ADD MORE STORIES BELOW -->
 
 </div>
 
