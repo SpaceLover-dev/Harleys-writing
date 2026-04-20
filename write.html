@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Write Post</title>
+  <title>Write</title>
 
   <style>
     body {
@@ -14,13 +14,16 @@
 
     input, textarea {
       width: 100%;
-      padding: 10px;
       margin: 10px 0;
+      padding: 10px;
       font-size: 16px;
     }
 
     button {
-      padding: 10px 20px;
+      padding: 12px;
+      background: black;
+      color: white;
+      border: none;
       cursor: pointer;
     }
   </style>
@@ -31,24 +34,67 @@
 <h1>Write a Post</h1>
 
 <input id="title" placeholder="Title">
-<textarea id="text" rows="10" placeholder="Write your post here..."></textarea>
+<textarea id="text" rows="10" placeholder="Write here..."></textarea>
 
-<button onclick="createPost()">Generate Post</button>
+<button onclick="publish()">Publish</button>
+
+<p id="status"></p>
 
 <script>
-function createPost() {
+async function publish() {
   const title = document.getElementById("title").value;
   const text = document.getElementById("text").value;
+  const status = document.getElementById("status");
 
-  const newPost = {
-    title: title,
-    text: text
-  };
+  if (!title || !text) {
+    alert("Fill everything first!");
+    return;
+  }
 
-  alert(
-    "Copy this into posts.json on GitHub:\n\n" +
-    JSON.stringify(newPost, null, 2)
+  status.innerText = "Publishing...";
+
+  // 🔧 CHANGE THESE
+  const username = "YOUR_USERNAME";
+  const repo = "YOUR_REPO";
+  const token = "YOUR_GITHUB_TOKEN";
+
+  // Get current posts.json
+  const getRes = await fetch(
+    `https://api.github.com/repos/${username}/${repo}/contents/posts.json`,
+    {
+      headers: {
+        Authorization: `token ${token}`
+      }
+    }
   );
+
+  const fileData = await getRes.json();
+  const content = JSON.parse(atob(fileData.content));
+
+  // Add new post
+  content.push({ title, text });
+
+  // Upload updated file
+  const updateRes = await fetch(
+    `https://api.github.com/repos/${username}/${repo}/contents/posts.json`,
+    {
+      method: "PUT",
+      headers: {
+        Authorization: `token ${token}`
+      },
+      body: JSON.stringify({
+        message: "New post",
+        content: btoa(JSON.stringify(content, null, 2)),
+        sha: fileData.sha
+      })
+    }
+  );
+
+  if (updateRes.ok) {
+    status.innerText = "✅ Published!";
+  } else {
+    status.innerText = "❌ Error publishing.";
+  }
 }
 </script>
 
