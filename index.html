@@ -47,19 +47,26 @@
 <div id="posts"></div>
 
 <script>
-fetch("posts.json")
+fetch("posts-index.json")
   .then(res => res.json())
-  .then(posts => {
+  .then(files => {
     const container = document.getElementById("posts");
 
-    posts.reverse().forEach(post => {
-      container.innerHTML += `
-        <div class="post">
-          <h2>${post.title}</h2>
-          <p>${post.text}</p>
-        </div>
-      `;
+    files.reverse().forEach(file => {
+      fetch("posts/" + file)
+        .then(res => res.json())
+        .then(post => {
+          container.innerHTML += `
+            <div class="post">
+              <h2>${post.title}</h2>
+              <p>${post.text}</p>
+            </div>
+          `;
+        });
     });
+  });
+</script>
+
   });
 </script>
 
