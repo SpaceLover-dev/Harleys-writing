@@ -4,27 +4,25 @@
   <meta charset="UTF-8">
   <title>Harley’s Writing</title>
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=EB+Garamond&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      padding: 0;
       background: #f4f1ea;
-      color: #2b2b2b;
       font-family: 'EB Garamond', serif;
+      color: #2b2b2b;
     }
 
     .container {
-      max-width: 850px;
+      max-width: 900px;
       margin: auto;
-      padding: 60px 25px;
+      padding: 70px 25px;
     }
 
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 52px;
+      font-size: 54px;
       text-align: center;
       margin-bottom: 10px;
     }
@@ -33,51 +31,25 @@
       text-align: center;
       font-size: 18px;
       color: #555;
-      margin-bottom: 30px;
+      margin-bottom: 60px;
       font-style: italic;
     }
 
-    /* FRONT COVER */
-    .cover {
-      width: 100%;
-      max-height: 320px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin: 20px 0 50px 0;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-    }
-
-    /* STORY CARDS */
     .story {
-      display: flex;
-      gap: 15px;
-      align-items: center;
       background: #fffdf7;
       border: 1px solid #e6e0d4;
-      padding: 15px;
-      margin: 20px 0;
+      padding: 22px;
+      margin: 18px 0;
       border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-      transition: transform 0.15s ease;
-    }
-
-    .story:hover {
-      transform: translateY(-3px);
-    }
-
-    .story img {
-      width: 80px;
-      height: 80px;
-      object-fit: cover;
-      border-radius: 8px;
-      border: 1px solid #ddd;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
     }
 
     a {
-      font-size: 22px;
+      font-size: 26px;
       text-decoration: none;
       color: #1f1f1f;
       font-weight: 600;
+      font-family: 'Playfair Display', serif;
     }
 
     a:hover {
@@ -85,10 +57,9 @@
     }
 
     .summary {
+      margin-top: 8px;
+      font-size: 16px;
       color: #666;
-      font-size: 14px;
-      margin-top: 5px;
-      line-height: 1.5;
     }
   </style>
 </head>
@@ -97,34 +68,16 @@
 
 <div class="container">
 
-  <!-- TITLE -->
   <h1>Harley’s Writing</h1>
 
   <p class="description">
-    A quiet collection of essays and stories.
+    A quiet archive of essays and stories.
   </p>
 
-  <!-- FRONT COVER IMAGE -->
-  <img src="cover.jpg" class="cover" alt="Site Cover">
-
-  <!-- STORY 1 -->
+  <!-- STORY LINK -->
   <div class="story">
-    <img src="stories/story1/cover.jpg" alt="Story 1 cover">
-
-    <div>
-      <a href="stories/story1/">My First Story</a>
-      <p class="summary">A short introduction to the beginning of something personal.</p>
-    </div>
-  </div>
-
-  <!-- STORY 2 -->
-  <div class="story">
-    <img src="stories/story2/cover.jpg" alt="Story 2 cover">
-
-    <div>
-      <a href="stories/story2/">Another Essay</a>
-      <p class="summary">A reflection on thoughts, ideas, or memories.</p>
-    </div>
+    <a href="stories/story1/">My First Story</a>
+    <p class="summary">A short introduction to something personal.</p>
   </div>
 
 </div>
